@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.eggs/
+*.log
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Airflow
+airflow.cfg
+unittests.cfg
+airflow.db
+logs/
+dags/*.pyc
+dags/__pycache__/
+
+# SQLite Database (used by default by Airflow if no other DB is set)
+airflow.db
+
+# Astro CLI (if used for local development)
+.include/
+
+# Docker files (if Airflow runs in Docker containers)
+docker-compose.yaml
+.env
+
+# System files
+*.swp
+*.swo
+*.DS_Store
