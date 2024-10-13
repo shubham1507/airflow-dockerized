@@ -1,15 +1,12 @@
 from datetime import datetime, timedelta
-
 from airflow import DAG
-from airflow.providers.amazon.aws.sensors.s3_key import S3KeySensor
-
+from airflow.providers.amazon.aws.sensors.s3 import S3KeySensor
 
 default_args = {
     'owner': 'coder2j',
     'retries': 5,
     'retry_delay': timedelta(minutes=10)
 }
-
 
 with DAG(
     dag_id='dag_with_minio_s3_v02',
